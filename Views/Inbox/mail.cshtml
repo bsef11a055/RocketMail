@@ -10,7 +10,7 @@
         <div class="article">
           <h2><span>Inbox</span> </h2>
             <br />
-              <a class="fancybox" rel="group" href="~/pic.jpg"><img src="~/pic.jpg" height="50" width="50" alt=""/></a>
+             <!-- <a class="fancybox" rel="group" href="~/pic.jpg"><img src="~/pic.jpg" height="50" width="50" alt=""/></a>-->
             <a href="/Inbox/change?id=2" style="text-align:right">Change Password</a>
             <br /><br /><br />
           <div class="clr"></div>
@@ -31,7 +31,7 @@
                       <td><h2><pre style="font-family:Arial">Sender     </pre></h2></td>
                       <td><h2><pre style="font-family:Arial">Message         </pre></h2></td>
                       <td><h2><pre style="font-family:Arial">Date       </pre></h2></td>
-                      <td><h2><pre style="font-family:Arial">Attachment       </pre></h2></td>
+                      
                      
                   </tr>
                  </table>
@@ -41,10 +41,6 @@
                     @Scripts.Render("~/bundles/jquery")
                   <script>
                     
-                      function func() {
-                          alert("helllooo");
-
-                      }
 
                           $(document).ready(function () {
                               $('#c').click(function () {
@@ -57,12 +53,13 @@
 
                                       $.each(data, function (i, item) {
                                          
-                                          $('#t').append('<tr><td><pre style="font-family:Arial">' + item.sender + '</pre></td><td><pre style="font-family:Arial" >                                '
-                                              + item.message +
-                                              '</pre></td><td><pre style="font-family:Arial">   ' + item.date + '</pre>                      '+
-                                              '</pre></td><td><pre style="font-family:Arial"> <a href=/Inbox/Delete/'+item.Id+'>Delete</a> </pre>            '
-                                             + ' <pre style="font-family:Arial"></pre>'+'<pre style="font-family:Arial"> <a href=/Inbox/attachment/' + item.Id +
-                                             '>Attachment</a> </pre></td></tr> ');
+                                          $('#t').append('<tr><td><pre style="font-family:Arial">' + item.sender +
+                                      '</pre></td><td><pre style="font-family:Arial" >                                '
+                                      + item.message + '</pre></td><td><pre style="font-family:Arial">                     '
+                                      + item.date + '</pre>                       ' +
+                                              '</pre></td><td><pre style="font-family:Arial"> <a href=/Inbox/Delete/' + item.Id + '>Delete</a> </pre>            '
+                                             + ' <pre style="font-family:Arial"></pre>' + '<pre style="font-family:Arial"> <a href=/Inbox/attachment/' + item.Id +
+                                             '>Attachment</a></td></tr> ');
                                      
                                       });
                                           
